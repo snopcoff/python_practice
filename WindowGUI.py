@@ -30,5 +30,18 @@ button.place( x = 290, y = 130 )
 answer = tkinter.Label( text = "...........................", bg = "white" )
 answer.place( x = 130, y = 230 )
 
+
+# Button clicked event
+def ask_button_click():
+    val = entry.get()
+    minutes = float( val )
+    hours = round( minutes / 60, 2 )
+    answer [ "text" ] = "It's equal to " + str( hours ) + " hours!"
+    answer.place( x = 105, y = 230 )
+    answer.config( font = [ "Comic Sans MS", 17 ] )
+
+
+button [ "command" ] = ask_button_click
+
 # Main loop
 window.mainloop()
